@@ -1,0 +1,31 @@
+URxvt.font: xft:RobotoMono-Regular:size=10:antialias=true:hinting=true
+URxvt.letterSpace: -1
+URxvt*transparent: true
+URxvt*shading: 30
+URxvt.scrollBar: false
+URxvt.cursorBlink: true
+
+!! Colors
+URxvt*background:		    #101218
+URxvt*foreground:		    #d1d4e0
+URxvt*cursorColor:		    #d1d4e0
+URxvt*scrollColor:		    #d1d4e0
+URxvt*highlightColor:		#d1d4e0
+URxvt*highlightTextColor:	#d1d4e0
+
+!! Keybinds
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+URxvt.keysym.Control-c: perl:clipboard:copy
+URxvt.keysym.Control-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+!! Copy Paste
+URxvt.perl-ext-common: clipboard
+URxvt.clipboard.autocopy: true
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
